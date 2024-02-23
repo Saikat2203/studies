@@ -1,0 +1,27 @@
+1. sudo apt update -y
+
+2. sudo apt install openjdk-8-jdk openjdk-8-jre
+
+3. java -version
+
+4. sudo mkdir /app && cd /app
+
+5. sudo wget -O nexus.tar.gz https://download.sonatype.com/nexus/3/latest-unix.tar.gz
+
+6. sudo tar -xvf nexus.tar.gz
+
+7. sudo mv nexus-3* nexus
+
+8. sudo adduser nexus
+
+9. sudo chown -R nexus:nexus /app/nexussudo chown -R nexus:nexus /app/sonatype-work
+
+10. sudo vi  /app/nexus/bin/nexus.rc
+
+11. run_as_user="nexus"
+
+12. sudo vi /app/nexus/bin/nexus.vmoptions
+
+13. sudo systemctl start nexus
+
+14. systemctl status nexus.service
